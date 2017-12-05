@@ -6,15 +6,16 @@ apply plugin: 'java'
 sourceCompatibility = 1.8
 
 repositories {
-    jcenter()
+  jcenter()
 }
 
 ext {
-    aws_java_sdk = '1.11.236'
+  aws_java_sdk = '1.11.236'
 }
 
 dependencies {
-    compile "com.amazonaws:aws-java-sdk-api-gateway:${aws_java_sdk}"
-    testCompile "junit:junit:4.12"
+  compile "com.amazonaws:aws-java-sdk-api-gateway:${aws_java_sdk}"
+  testCompile "junit:junit:4.12"
+  testCompile "org.assertj:assertj-core:3.8.0"
 
 }
