@@ -15,6 +15,7 @@ import com.amazonaws.services.apigateway.model.PutMethodRequest;
 import com.amazonaws.services.apigateway.model.PutMethodResult;
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import java.util.UUID;
@@ -22,6 +23,7 @@ import java.util.UUID;
 import static org.assertj.core.api.Assertions.assertThat;
 
 
+@Ignore
 public class AmazonApiBuildShould {
 
   private AmazonApiGateway client = AmazonApiGatewayClientBuilder.standard()
@@ -34,7 +36,7 @@ public class AmazonApiBuildShould {
   @Before
   public void initialise() {
     String randomAPI = UUID.randomUUID().toString().substring(0, 8);
-    restApi = client.createRestApi(new CreateRestApiRequest().withName("n-restTest-" + randomAPI));
+    restApi = client.createRestApi(new CreateRestApiRequest().withName("t-restTest-" + randomAPI));
   }
 
   @After
